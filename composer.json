@@ -1,16 +1,16 @@
 {
-    "name": "topthink/think-helper",
+    "name": "cui/think-helper",
     "description": "The ThinkPHP5 Helper Package",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "yunwuxin",
-            "email": "448901948@qq.com"
+            "name": "cui",
+            "email": "948346354@qq.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "think\\helper\\": "src"
+            "cui\\helper\\": "src"
         },
         "files": [
             "src/helper.php"
