@@ -11,9 +11,6 @@
     "autoload": {
         "psr-4": {
             "cui\\helper\\": "src"
-        },
-        "files": [
-            "src/helper.php"
-        ]
+        }
     }
 }
