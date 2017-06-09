@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "think\\helper\\": "src"
+            "cui\\think\\helper\\": "src"
         },
         "files": [
         ]
