@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\helpers;
+namespace cui\think\helpers;
 
 /**
  * Object that represents the removal of array value while performing [[ArrayHelper::merge()]].
@@ -27,10 +27,10 @@ namespace cui\helpers;
  *     'ids' => [
  *         2,
  *     ],
- *     'validDomains' => new \cui\helpers\UnsetArrayValue(),
+ *     'validDomains' => new \cui\think\helpers\UnsetArrayValue(),
  * ];
  *
- * $result = \cui\helpers\ArrayHelper::merge($array1, $array2);
+ * $result = \cui\think\helpers\ArrayHelper::merge($array1, $array2);
  * ```
  *
  * The result will be

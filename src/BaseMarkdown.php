@@ -5,10 +5,10 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\helpers;
+namespace cui\think\helpers;
 
 use cui;
-use cui\base\InvalidParamException;
+use cui\think\base\InvalidParamException;
 
 /**
  * BaseMarkdown provides concrete implementation for [[Markdown]].
@@ -57,7 +57,7 @@ class BaseMarkdown
      * @param string $flavor the markdown flavor to use. See [[$flavors]] for available values.
      * Defaults to [[$defaultFlavor]], if not set.
      * @return string the parsed HTML output
-     * @throws \cui\base\InvalidParamException when an undefined flavor is given.
+     * @throws \cui\think\base\InvalidParamException when an undefined flavor is given.
      */
     public static function process($markdown, $flavor = null)
     {
@@ -75,7 +75,7 @@ class BaseMarkdown
      * @param string $flavor the markdown flavor to use. See [[$flavors]] for available values.
      * Defaults to [[$defaultFlavor]], if not set.
      * @return string the parsed HTML output
-     * @throws \cui\base\InvalidParamException when an undefined flavor is given.
+     * @throws \cui\think\base\InvalidParamException when an undefined flavor is given.
      */
     public static function processParagraph($markdown, $flavor = null)
     {
@@ -88,7 +88,7 @@ class BaseMarkdown
      * @param string $flavor the markdown flavor to use. See [[$flavors]] for available values.
      * Defaults to [[$defaultFlavor]], if not set.
      * @return \cebe\markdown\Parser
-     * @throws \cui\base\InvalidParamException when an undefined flavor is given.
+     * @throws \cui\think\base\InvalidParamException when an undefined flavor is given.
      */
     protected static function getParser($flavor)
     {

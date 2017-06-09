@@ -5,12 +5,12 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\helpers;
+namespace cui\think\helpers;
 
 use cui;
-use cui\base\ErrorException;
-use cui\base\InvalidConfigException;
-use cui\base\InvalidParamException;
+use cui\think\base\ErrorException;
+use cui\think\base\InvalidConfigException;
+use cui\think\base\InvalidParamException;
 
 /**
  * BaseFileHelper provides concrete implementation for [[FileHelper]].
@@ -84,9 +84,9 @@ class BaseFileHelper
      *
      * @param string $file the original file
      * @param string $language the target language that the file should be localized to.
-     * If not set, the value of [[\cui\base\Application::language]] will be used.
+     * If not set, the value of [[\cui\think\base\Application::language]] will be used.
      * @param string $sourceLanguage the language that the original file is in.
-     * If not set, the value of [[\cui\base\Application::sourceLanguage]] will be used.
+     * If not set, the value of [[\cui\think\base\Application::sourceLanguage]] will be used.
      * @return string the matching localized file, or the original file if the localized version is not found.
      * If the target and the source language codes are the same, the original file will be returned.
      */
@@ -253,7 +253,7 @@ class BaseFileHelper
      *   that do not contain files. This affects directories that do not contain files initially as well as directories that
      *   do not contain files at the target destination because files have been filtered via `only` or `except`.
      *   Defaults to true. This option is available since version 2.0.12. Before 2.0.12 empty directories are always copied.
-     * @throws \cui\base\InvalidParamException if unable to open directory
+     * @throws \cui\think\base\InvalidParamException if unable to open directory
      */
     public static function copyDirectory($src, $dst, $options = [])
     {
@@ -483,7 +483,7 @@ class BaseFileHelper
      * @param int $mode the permission to be set for the created directory.
      * @param bool $recursive whether to create parent directories if they do not exist.
      * @return bool whether the directory is created successfully
-     * @throws \cui\base\Exception if the directory could not be created (i.e. php error due to parallel changes)
+     * @throws \cui\think\base\Exception if the directory could not be created (i.e. php error due to parallel changes)
      */
     public static function createDirectory($path, $mode = 0775, $recursive = true)
     {
@@ -501,13 +501,13 @@ class BaseFileHelper
             }
         } catch (\Exception $e) {
             if (!is_dir($path)) {// https://github.com/cuisoft/cui2/issues/9288
-                throw new \cui\base\Exception("Failed to create directory \"$path\": " . $e->getMessage(), $e->getCode(), $e);
+                throw new \cui\think\base\Exception("Failed to create directory \"$path\": " . $e->getMessage(), $e->getCode(), $e);
             }
         }
         try {
             return chmod($path, $mode);
         } catch (\Exception $e) {
-            throw new \cui\base\Exception("Failed to change permissions for directory \"$path\": " . $e->getMessage(), $e->getCode(), $e);
+            throw new \cui\think\base\Exception("Failed to change permissions for directory \"$path\": " . $e->getMessage(), $e->getCode(), $e);
         }
     }
 
@@ -644,7 +644,7 @@ class BaseFileHelper
      * Processes the pattern, stripping special characters like / and ! from the beginning and settings flags instead.
      * @param string $pattern
      * @param bool $caseSensitive
-     * @throws \cui\base\InvalidParamException
+     * @throws \cui\think\base\InvalidParamException
      * @return array with keys: (string) pattern, (int) flags, (int|bool) firstWildcard
      */
     private static function parseExcludePattern($pattern, $caseSensitive)

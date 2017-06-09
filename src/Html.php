@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\helpers;
+namespace cui\think\helpers;
 
 /**
  * Html provides a set of static methods for generating commonly used HTML tags.

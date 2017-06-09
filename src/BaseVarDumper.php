@@ -5,10 +5,10 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\helpers;
+namespace cui\think\helpers;
 
-use cui\base\Arrayable;
-use cui\base\InvalidValueException;
+use cui\think\base\Arrayable;
+use cui\think\base\InvalidValueException;
 
 /**
  * BaseVarDumper provides concrete implementation for [[VarDumper]].

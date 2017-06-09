@@ -5,11 +5,11 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\helpers;
+namespace cui\think\helpers;
 
-use cui\base\InvalidParamException;
-use cui\base\Arrayable;
-use cui\web\JsExpression;
+use cui\think\base\InvalidParamException;
+use cui\think\base\Arrayable;
+use cui\think\web\JsExpression;
 
 /**
  * BaseJson provides concrete implementation for [[Json]].
@@ -112,7 +112,7 @@ class BaseJson
      * Handles [[encode()]] and [[decode()]] errors by throwing exceptions with the respective error message.
      *
      * @param int $lastError error code from [json_last_error()](http://php.net/manual/en/function.json-last-error.php).
-     * @throws \cui\base\InvalidParamException if there is any encoding/decoding error.
+     * @throws \cui\think\base\InvalidParamException if there is any encoding/decoding error.
      * @since 2.0.6
      */
     protected static function handleJsonError($lastError)

@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\helpers;
+namespace cui\think\helpers;
 
 /**
  * VarDumper is intended to replace the buggy PHP function var_dump and print_r.

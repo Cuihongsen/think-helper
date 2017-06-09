@@ -5,9 +5,9 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\helpers;
+namespace cui\think\helpers;
 
-use cui\console\Markdown as ConsoleMarkdown;
+use cui\think\console\Markdown as ConsoleMarkdown;
 
 /**
  * BaseConsole provides concrete implementation for [[Console]].

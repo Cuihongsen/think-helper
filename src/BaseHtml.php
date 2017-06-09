@@ -5,14 +5,14 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\helpers;
+namespace cui\think\helpers;
 
 use cui;
-use cui\base\InvalidParamException;
-use cui\db\ActiveRecordInterface;
-use cui\validators\StringValidator;
-use cui\web\Request;
-use cui\base\Model;
+use cui\think\base\InvalidParamException;
+use cui\think\db\ActiveRecordInterface;
+use cui\think\validators\StringValidator;
+use cui\think\web\Request;
+use cui\think\base\Model;
 
 /**
  * BaseHtml provides concrete implementation for [[Html]].
@@ -99,7 +99,7 @@ class BaseHtml
 
     /**
      * Encodes special characters into HTML entities.
-     * The [[\cui\base\Application::charset|application charset]] will be used for encoding.
+     * The [[\cui\think\base\Application::charset|application charset]] will be used for encoding.
      * @param string $content the content to be encoded
      * @param bool $doubleEncode whether to encode HTML entities in `$content`. If false,
      * HTML entities in `$content` will not be further encoded.
@@ -312,7 +312,7 @@ class BaseHtml
      * @param string $method the form submission method, such as "post", "get", "put", "delete" (case-insensitive).
      * Since most browsers only support "post" and "get", if other methods are given, they will
      * be simulated using "post", and a hidden input will be added which contains the actual method type.
-     * See [[\cui\web\Request::methodParam]] for more details.
+     * See [[\cui\think\web\Request::methodParam]] for more details.
      * @param array $options the tag options in terms of name-value pairs. These will be rendered as
      * the attributes of the resulting tag. The values will be HTML-encoded using [[encode()]].
      * If a value is null, the corresponding attribute will not be rendered.
@@ -402,7 +402,7 @@ class BaseHtml
      * If a value is null, the corresponding attribute will not be rendered.
      * See [[renderTagAttributes()]] for details on how attributes are being rendered.
      * @return string the generated hyperlink
-     * @see \cui\helpers\Url::to()
+     * @see \cui\think\helpers\Url::to()
      */
     public static function a($text, $url = null, $options = [])
     {
@@ -778,7 +778,7 @@ class BaseHtml
      * are the corresponding option labels. The array can also be nested (i.e. some array values are arrays too).
      * For each sub-array, an option group will be generated whose label is the key associated with the sub-array.
      * If you have a list of data models, you may convert them into the format described above using
-     * [[\cui\helpers\ArrayHelper::map()]].
+     * [[\cui\think\helpers\ArrayHelper::map()]].
      *
      * Note, the values and labels will be automatically HTML-encoded by this method, and the blank spaces in
      * the labels will also be HTML-encoded.
@@ -833,7 +833,7 @@ class BaseHtml
      * are the corresponding option labels. The array can also be nested (i.e. some array values are arrays too).
      * For each sub-array, an option group will be generated whose label is the key associated with the sub-array.
      * If you have a list of data models, you may convert them into the format described above using
-     * [[\cui\helpers\ArrayHelper::map()]].
+     * [[\cui\think\helpers\ArrayHelper::map()]].
      *
      * Note, the values and labels will be automatically HTML-encoded by this method, and the blank spaces in
      * the labels will also be HTML-encoded.
@@ -1294,7 +1294,7 @@ class BaseHtml
 
     /**
      * If `maxlength` option is set true and the model attribute is validated by a string validator,
-     * the `maxlength` option will take the value of [[\cui\validators\StringValidator::max]].
+     * the `maxlength` option will take the value of [[\cui\think\validators\StringValidator::max]].
      * @param Model $model the model object
      * @param string $attribute the attribute name or expression.
      * @param array $options the tag options in terms of name-value pairs.
@@ -1326,7 +1326,7 @@ class BaseHtml
      * The following special options are recognized:
      *
      * - maxlength: integer|boolean, when `maxlength` is set true and the model attribute is validated
-     *   by a string validator, the `maxlength` option will take the value of [[\cui\validators\StringValidator::max]].
+     *   by a string validator, the `maxlength` option will take the value of [[\cui\think\validators\StringValidator::max]].
      *   This is available since version 2.0.3.
      *
      * @return string the generated input tag
@@ -1367,7 +1367,7 @@ class BaseHtml
      * The following special options are recognized:
      *
      * - maxlength: integer|boolean, when `maxlength` is set true and the model attribute is validated
-     *   by a string validator, the `maxlength` option will take the value of [[\cui\validators\StringValidator::max]].
+     *   by a string validator, the `maxlength` option will take the value of [[\cui\think\validators\StringValidator::max]].
      *   This option is available since version 2.0.6.
      *
      * @return string the generated input tag
@@ -1414,7 +1414,7 @@ class BaseHtml
      * The following special options are recognized:
      *
      * - maxlength: integer|boolean, when `maxlength` is set true and the model attribute is validated
-     *   by a string validator, the `maxlength` option will take the value of [[\cui\validators\StringValidator::max]].
+     *   by a string validator, the `maxlength` option will take the value of [[\cui\think\validators\StringValidator::max]].
      *   This option is available since version 2.0.6.
      *
      * @return string the generated textarea tag
@@ -1517,7 +1517,7 @@ class BaseHtml
      * are the corresponding option labels. The array can also be nested (i.e. some array values are arrays too).
      * For each sub-array, an option group will be generated whose label is the key associated with the sub-array.
      * If you have a list of data models, you may convert them into the format described above using
-     * [[\cui\helpers\ArrayHelper::map()]].
+     * [[\cui\think\helpers\ArrayHelper::map()]].
      *
      * Note, the values and labels will be automatically HTML-encoded by this method, and the blank spaces in
      * the labels will also be HTML-encoded.
@@ -1572,7 +1572,7 @@ class BaseHtml
      * are the corresponding option labels. The array can also be nested (i.e. some array values are arrays too).
      * For each sub-array, an option group will be generated whose label is the key associated with the sub-array.
      * If you have a list of data models, you may convert them into the format described above using
-     * [[\cui\helpers\ArrayHelper::map()]].
+     * [[\cui\think\helpers\ArrayHelper::map()]].
      *
      * Note, the values and labels will be automatically HTML-encoded by this method, and the blank spaces in
      * the labels will also be HTML-encoded.
@@ -1735,7 +1735,7 @@ class BaseHtml
      * are the corresponding option labels. The array can also be nested (i.e. some array values are arrays too).
      * For each sub-array, an option group will be generated whose label is the key associated with the sub-array.
      * If you have a list of data models, you may convert them into the format described above using
-     * [[\cui\helpers\ArrayHelper::map()]].
+     * [[\cui\think\helpers\ArrayHelper::map()]].
      *
      * Note, the values and labels will be automatically HTML-encoded by this method, and the blank spaces in
      * the labels will also be HTML-encoded.
