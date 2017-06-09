@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\think\helpers;
+namespace cui\think\helper;
 
 /**
  * Json is a helper class providing JSON data encoding and decoding.

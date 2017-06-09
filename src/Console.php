@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\think\helpers;
+namespace cui\think\helper;
 
 /**
  * Console helper provides useful methods for command line related tasks such as getting input or formatting and coloring

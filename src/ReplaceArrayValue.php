@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\think\helpers;
+namespace cui\think\helper;
 
 /**
  * Object that represents the replacement of array value while performing [[ArrayHelper::merge()]].
@@ -27,13 +27,13 @@ namespace cui\think\helpers;
  *     'ids' => [
  *         2,
  *     ],
- *     'validDomains' => new \cui\think\helpers\ReplaceArrayValue([
+ *     'validDomains' => new \cui\think\helper\ReplaceArrayValue([
  *         'cuiframework.com',
  *         'www.cuiframework.com',
  *     ]),
  * ];
  *
- * $result = \cui\think\helpers\ArrayHelper::merge($array1, $array2);
+ * $result = \cui\think\helper\ArrayHelper::merge($array1, $array2);
  * ```
  *
  * The result will be

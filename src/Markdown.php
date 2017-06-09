@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\think\helpers;
+namespace cui\think\helper;
 
 /**
  * Markdown provides an ability to transform markdown into HTML.

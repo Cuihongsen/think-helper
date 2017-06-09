@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\think\helpers;
+namespace cui\think\helper;
 
 use cui\think\base\Arrayable;
 use cui\think\base\InvalidValueException;

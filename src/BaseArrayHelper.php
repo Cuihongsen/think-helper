@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\think\helpers;
+namespace cui\think\helper;
 
 use cui;
 use cui\think\base\Arrayable;
@@ -158,17 +158,17 @@ class BaseArrayHelper
      *
      * ```php
      * // working with array
-     * $username = \cui\think\helpers\ArrayHelper::getValue($_POST, 'username');
+     * $username = \cui\think\helper\ArrayHelper::getValue($_POST, 'username');
      * // working with object
-     * $username = \cui\think\helpers\ArrayHelper::getValue($user, 'username');
+     * $username = \cui\think\helper\ArrayHelper::getValue($user, 'username');
      * // working with anonymous function
-     * $fullName = \cui\think\helpers\ArrayHelper::getValue($user, function ($user, $defaultValue) {
+     * $fullName = \cui\think\helper\ArrayHelper::getValue($user, function ($user, $defaultValue) {
      *     return $user->firstName . ' ' . $user->lastName;
      * });
      * // using dot format to retrieve the property of embedded object
-     * $street = \cui\think\helpers\ArrayHelper::getValue($users, 'address.street');
+     * $street = \cui\think\helper\ArrayHelper::getValue($users, 'address.street');
      * // using an array of keys to retrieve the value
-     * $value = \cui\think\helpers\ArrayHelper::getValue($versions, ['1.0', 'date']);
+     * $value = \cui\think\helper\ArrayHelper::getValue($versions, ['1.0', 'date']);
      * ```
      *
      * @param array|object $array array or object to extract value from
@@ -223,7 +223,7 @@ class BaseArrayHelper
      * ```php
      * // $array = ['type' => 'A', 'options' => [1, 2]];
      * // working with array
-     * $type = \cui\think\helpers\ArrayHelper::remove($array, 'type');
+     * $type = \cui\think\helper\ArrayHelper::remove($array, 'type');
      * // $array content
      * // $array = ['options' => [1, 2]];
      * ```
@@ -252,7 +252,7 @@ class BaseArrayHelper
      *
      * ```php
      * $array = ['Bob' => 'Dylan', 'Michael' => 'Jackson', 'Mick' => 'Jagger', 'Janet' => 'Jackson'];
-     * $removed = \cui\think\helpers\ArrayHelper::removeValue($array, 'Jackson');
+     * $removed = \cui\think\helper\ArrayHelper::removeValue($array, 'Jackson');
      * // result:
      * // $array = ['Bob' => 'Dylan', 'Mick' => 'Jagger'];
      * // $removed = ['Michael' => 'Jackson', 'Janet' => 'Jackson'];
@@ -810,20 +810,20 @@ class BaseArrayHelper
      *     'E' => 1,
      * ];
      *
-     * $result = \cui\think\helpers\ArrayHelper::filter($array, ['A']);
+     * $result = \cui\think\helper\ArrayHelper::filter($array, ['A']);
      * // $result will be:
      * // [
      * //     'A' => [1, 2],
      * // ]
      *
-     * $result = \cui\think\helpers\ArrayHelper::filter($array, ['A', 'B.C']);
+     * $result = \cui\think\helper\ArrayHelper::filter($array, ['A', 'B.C']);
      * // $result will be:
      * // [
      * //     'A' => [1, 2],
      * //     'B' => ['C' => 1],
      * // ]
      *
-     * $result = \cui\think\helpers\ArrayHelper::filter($array, ['B', '!B.C']);
+     * $result = \cui\think\helper\ArrayHelper::filter($array, ['B', '!B.C']);
      * // $result will be:
      * // [
      * //     'B' => ['D' => 2],

@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\think\helpers;
+namespace cui\think\helper;
 
 use cui;
 use cui\think\base\ErrorException;
@@ -32,7 +32,7 @@ class BaseFileHelper
     /**
      * @var string the path (or alias) of a PHP file containing MIME type information.
      */
-    public static $mimeMagicFile = '@cui/helpers/mimeTypes.php';
+    public static $mimeMagicFile = '@cui/helper/mimeTypes.php';
 
 
     /**

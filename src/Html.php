@@ -5,7 +5,7 @@
  * @license http://www.cuiframework.com/license/
  */
 
-namespace cui\think\helpers;
+namespace cui\think\helper;
 
 /**
  * Html provides a set of static methods for generating commonly used HTML tags.
@@ -14,7 +14,7 @@ namespace cui\think\helpers;
  * tags they generate. You can specify, for example, `class`, `style` or `id` for an html element
  * using the `$options` parameter. See the documentation of the [[tag()]] method for more details.
  *
- * For more details and usage information on Html, see the [guide article on html helpers](guide:helper-html).
+ * For more details and usage information on Html, see the [guide article on html helper](guide:helper-html).
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
