@@ -13,7 +13,6 @@
             "cui\\helper\\": "src"
         },
         "files": [
-            "src/helpers.php"
         ]
     }
 }
